@@ -1,0 +1,15 @@
+ <p><input type="search" class="form-control" placeholder="Search" ng-model="query"></p>
+<!-- <table class="table table-hover table-bordered"> -->
+<table class="table table-hover table-bordered">
+  <thead>
+  <tr>
+      <th ng-repeat="field in fields" ng-click="sort(field)"> {{field | labelCase}} <span ng-show="sort.field===field && !sort.order" class="glyphicon glyphicon-chevron-down"/><span ng-show="sort.field===field && sort.order" class="glyphicon glyphicon-chevron-up"/> </th><th>Cover</th>
+  </tr>
+  </thead>
+    <tbody>
+    <tr ng-click="read (test.idTest)" ng-repeat="test in tests | filter: query | orderBy: sort.field : sort.order" >
+        <td ng-repeat="field in fields" > {{test[field]}} </td>
+     <td ><img width="100px" style="display: block; margin: 0 auto;" src="http://www.thewoodjoynt.com/Content/Images/Products/NoImageAvailable.jpg"   ng-if="!test.image"/><img width="100px" style="display: block; margin: 0 auto;" ng-src="{{test.image.urlImage}}"/></td>
+     </tr>
+    </tbody>
+</table>

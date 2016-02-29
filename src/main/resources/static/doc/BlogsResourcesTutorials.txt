@@ -1,0 +1,44 @@
+https://www.youtube.com/watch?v=y_JKt6CCipQ
+
+LEVELUPLUNCH
+http://www.leveluplunch.com/java/tutorials/
+
+BAELDUNG
+http://www.baeldung.com/rest-with-spring-series/
+http://courses.baeldung.com/courses/
+
+LEAN STACK
+https://www.youtube.com/channel/UChCCDds_KM-w02yVn7cQI_Q
+https://www.youtube.com/channel/UChCCDds_KM-w02yVn7cQI_Q/playlists
+
+GURU
+https://www.youtube.com/channel/UCrXb8NaMPQCQkT8yMP_hSkw/videos 
+
+Java Vids
+https://www.youtube.com/playlist?list=PLmcxdcWPhFqMq2BctGktOcIJKUw23wJeh
+https://www.youtube.com/watch?v=mH2jx2RCu7o&list=PLmcxdcWPhFqMq2BctGktOcIJKUw23wJeh
+
+SPRING SOURCE DEV
+https://www.youtube.com/user/SpringSourceDev/videos
+https://www.youtube.com/watch?v=Y3rP4VT7qWM
+https://www.youtube.com/watch?v=XO-OdIXNU_o
+https://www.youtube.com/watch?v=D0sPK5v8GG4
+https://www.youtube.com/watch?v=Qzjs18pJQeU
+https://www.youtube.com/watch?v=L5JgndjwwBo
+https://www.youtube.com/watch?v=zbeMDM-zDNI
+https://www.youtube.com/watch?v=AMh7c-GP0Yc
+https://www.youtube.com/watch?v=vX_txZ3ETBg
+
+
+Henkel(Angular+spring4 Rest)
+https://www.youtube.com/channel/UCcawgWKCyddtpu9PP_Fz-tA/playlists 
+
+Theamlief JPA Boot Crud
+https://www.youtube.com/channel/UCuPNsZ9wPwJsuiAYNjlheqw/videos
+
+SpringMVC 
+https://www.youtube.com/channel/UCrTlRAWrnUrZOR7TEuZFbOw/videos
+
+blogs examples 
+http://www.springbyexample.org/examples/
+https://samerabdelkafi.wordpress.com/2015/09/14/rest-api-documentation-with-swagger-and-angularjs/

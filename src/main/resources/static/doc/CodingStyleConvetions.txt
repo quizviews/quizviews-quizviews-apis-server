@@ -1,0 +1,74 @@
+-----------------------------------------------------------------------------------------------------------------------
+
+                            <<<|-_-|>>>PLEASE RESPECT OUR CONVENTIONS<<<|-_-|>>>
+-----------------------------------------------------------------------------------------------------------------------
+. No warning --> no problems
+. comments are OK
+. Use Task List
+. TDD approach
+. tutorials or help link is accepted, put it in a text file in this "doc" directory
+------------------------------------------------------------------------------------------------------------------------
+                DI -> by Constructor 
+
+------------------------------------------------------------------------------------------------------------------------
+                Order of CRUD Methods 
+------------------------------------------------------------------------------------------------------------------------
+	ReadAll
+	ReadOne
+	Create
+	Update 
+	Delete
+------------------------------------------------------------------------------------------------------------------------
+                CRUD Naming Methods(like Spring.io tutorials )
+------------------------------------------------------------------------------------------------------------------------
+	CONTROLLER             SERVICE              REPOSITORY
+	addTest                 addTest             addTest   {save(T)}
+	readTest                readTest            readTest  {findOne}
+	listTests               listTests           listTests {findAll}
+	updateTest              updateTest          updateTest{save}
+	deleteTest              deleteTest          deleteTest {delete}
+	
+
+------------------------------------------------------------------------------------------------------------------------
+                         ENTITY
+------------------------------------------------------------------------------------------------------------------------
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id_test")
+	private int idTest;
+	@Column(name = "created_at")
+	public Date createdAt;
+	
+	@Column(name = "updated_at")
+	public Date updatedAt;
+	private fields
+	tableClassRelationShip
+	
+	public constructor()
+	public constructors(Objects fields)//
+	
+	@PrePersist
+	private void createdAt() {
+	this.createdAt = this.updatedAt = new Date();
+	}
+	@PreUpdate
+	private  void updatedAt() {
+	this.updatedAt = new Date();
+	}
+	public int getIdTest() {
+	 return this.idTest;
+	}
+	
+	public void setIdQuestion(int idTest) {
+	 this.idTest = idTest;
+	}
+	
+	public getters/setters
+	
+	
+	@Override
+	public String toString() {
+	 return "Test [idTest=" + idTest + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + ", questions=" + questions + ", titleTest=" + titleTest + "]";
+	}
+
+---------------------------------------------------------------------------------------

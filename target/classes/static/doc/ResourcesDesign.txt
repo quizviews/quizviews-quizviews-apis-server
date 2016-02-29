@@ -1,0 +1,27 @@
+--------------------
+Resources Design
+--------------------
+
+/api/tests/{idTest}/                                         //POST-->test(s) that contains many questions
+( create test with its question if we want)
+(read the test and its questions(with its medias)  
+(update test only)
+
+/api/tests/{idTest}/questions/{idQuestion}/                      //POST--> add Questions having title/id/dateCreation
+
+/api/tests/{idTest}/questions/{idQuestion}/texts/{idText}        //POST--> add Question having text(s)
+/api/tests/{idTest}/questions/{idQuestion}/images/{idImage}      //POST--> add Question having Image
+/api/tests/{idTest}/questions/{idQuestion}/audios/{idAudio}      //POST--> add Question having Audio
+/api/tests/{idTest}/questions/{idQuestion}/videos/{idVideo}      //POST--> add Question having Video
+
+/api/tests/{idTest}/questions/{idQuestion}/answers/{idAnswer}                    //POST--> add Answers To Questions
+
+/api/tests/{idTest}/questions/{idQuestion}/answers/{idAnswer}texts/{idText}      //POST--> add text To Answer
+/api/tests/{idTest}/questions/{idQuestion}/answers/{idAnswer}/images/{idImage}   //POST--> add Image To Answer
+/api/tests/{idTest}/questions/{idQuestion}/answers/{idAnswer}/audios/{idAudio}   //POST--> add Answers To Questions
+/api/tests/{idTest}/questions/{idQuestion}/answers/{idAnswer}/videos/{idVideo}   //POST--> add Answers To Questions
+
+
+Corrections: correct the submitted answers of one Question of one test
+
+/api/tests/{idTest}/questions/{idQuestion}/corrections/   //Post-> posting [answers] and comparing them with the right answers stocked in the questions/{idQuestion}/answers/

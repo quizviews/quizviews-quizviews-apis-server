@@ -1,0 +1,46 @@
+
+<div class="row form-group" ng-form="{{field}}" ng-class="{ 'has-error':{{field}}.$dirty && {{field}}.$invalid }">
+	<label class="col-sm-2 control-label"> {{field| labelCase}} <span ng-if="required">*</span></label>
+	<div class="col-sm-6" ng-switch="required">
+		<!-- 	 	<input ng-switch-when="true" ng-model="record[field][0]" type="{{record[field][1]}}" class="form-control"  required ng-change="update()" ng-blur="blurUpdate()"/> -->
+		<!-- 		<input ng-switch-when="true" ng-model="record[field]" type="{{recordtypes[field]}}" class="form-control" required ng-change="update()" ng-blur="blurUpdate()" /> -->
+		<!-- 		<input ng-switch-when="true" ng-model="record[field]" type="{{types[field][0]}}" class="form-control" required ng-change="update()" ng-blur="blurUpdate()" /> -->
+		<input ng-switch-when="true"  ng-model="record[field]" type="{{field_message_list[field][0]}}" class="form-control" required ng-change="update()" ng-blur="blurUpdate()" />
+		<div class="input-group" ng-switch-default>
+			<!-- 		 <input  ng-model="record[field][0]" type="{{record[field][1]}}" class="form-control" ng-change="update()" ng-blur="blurUpdate()"/> -->
+			<!-- 			<input ng-model="record[field]" type="{{recordtypes[field]}}" class="form-control" ng-change="update()" ng-blur="blurUpdate()" /> <span class="input-group-btn"> -->
+			<!-- 			<input ng-model="record[field]" type="{{types[field][0]}}" class="form-control" ng-change="update()" ng-blur="blurUpdate()" /> <span class="input-group-btn"> -->
+			<input  ng-model="record[field]" type="{{field_message_list[field][0]}}" class="form-control" ng-change="update()" ng-blur="blurUpdate()" /> <span class="input-group-btn">
+				<button class="btn btn-default" ng-click=remove(field)>
+					<span class="glyphicon glyphicon-remove-circle"></span>
+				</button>
+			</span>
+		</div>
+	</div>
+  
+	<!-- Astuce 	to select one element from a list -->
+	<!-- 	  <p class="control-label" ng-repeat="(k,v) in types" ng-if="k==='url'">  {{k}} {{v}} {{v[0]}} {{v[1]}} </p> -->
+
+	<!-- this messages send message required or the type of its input when the input is not valid -> invalid and has changed on typing ->dirty -->
+	<div class="col-sm-4 has-error" ng-show="{{field}}.$dirty && {{field}}.$invalid" ng-messages="{{field}}.$error">
+		<p class="control-label" ng-message="required">{{field|labelCase}} is required.</p>
+		<!-- 	  <p class="control-label" ng-repeat="(k,v) in types" ng-message="{{k}}"> {{field|labelCase}} {{v[1]}} </p> -->
+		<!-- 		<p class="control-label" ng-repeat="(k,v) in types" ng-message="{{k}}">{{field|labelCase}} {{v[1]}}</p> -->
+		<p class="control-label" ng-repeat="(k,v) in type_message_list" ng-message="{{k}}">{{field|labelCase}} {{v[1]}}</p>
+	</div>
+	<br>
+
+	<!-- Astuce 	just for debugging and knowing what wire this template to its js directive $scope and its controller $scope-->
+	<div style="background: #444; padding: 0 5px;" ng-show="debug">
+		<hr>
+		<h6 style="color: red">record: {{record}}</h6>
+		<h6 style="color: green">field: {{field}}</h6>
+		<h6 style="color: blue">live: {{live}}</h6>
+		<h6 style="color: pink">required: {{required}}</h6>
+		<h6 style="color: yellow">types: {{types}}</h6>
+		<h6 style="color: grey">recordtypes: {{recordtypes}}</h6>
+		<h6 style="color: orange">Types{field}: {{types[field][0]}}</h6>
+ 
+		<hr>
+	</div>
+</div>

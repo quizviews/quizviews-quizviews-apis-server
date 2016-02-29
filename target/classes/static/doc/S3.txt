@@ -1,0 +1,20 @@
+simple storage Service 
+free
+http://www.skylable.com/docs/
+
+https://www.dropbox.com/developers/documentation/java
+https://github.com/dropbox/dropbox-sdk-java
+
+https://devcenter.heroku.com/articles/s3
+http://aws.amazon.com/fr/s3/
+http://aws.amazon.com/fr/s3/pricing/
+
+https://www.constant.com/cloud/storage/
+
+https://devcenter.heroku.com/articles/using-amazon-s3-for-file-uploads-with-java-and-play-2
+http://stackoverflow.com/questions/33153396/serving-files-using-spring-boot-and-spring-mvc-from-any-location-in-the-file-sys
+
+
+
+
+I wanted to do http://stackoverflow.com/questions/21123437/how-do-i-use-spring-boot-to-serve-static-content-located-in-dropbox-folder/21124562#21124562

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CRUD </title>
+    <style>
+        h1, h2, h3, h4, h5, h6, body, main {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1.1em;
+
+        }
+
+        .tutorial {
+            background: yellowgreen;
+        }
+
+        .serverPost {
+            border: 4px solid #74adff;
+            background: #4f100f;
+            width: 50%;
+            padding: 100px;
+            margin: 150px auto 0;
+        }
+    </style>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>-->
+</head>
+<body>
+<main>
+    <h1>Create your quiz !</h1>
+
+    <div class="tutorial">
+        <h2>tutorial serive in depth</h2>
+    <pre>
+    booksController-->books(service based from a provider)-->
+    livresController-->livres(service based from a provider)-->
+    </pre>
+        <hr>
+        <p> BooksController witch calls a provider service and a factory service</p>
+        <hr>
+        <p> first method foreach</p>
+
+        <div ng-app="app" ng-controller="BooksController as books">
+            <p> static final URL:{{books.url}}</p>
+
+        <h1>hello {{books.appName}} <b ng-show="false">world</b></h1>
+        <ul ng-repeat="(key, value) in books.listBooks">
+        <li>
+        <p> key: {{key}} value:{{value}}</p>
+
+        <p>{{value.title}}</p>
+
+        <p>{{value.author}}</p>
+
+        <p>{{value.year_published}}</p>
+        </li>
+        </ul>
+        <hr>
+        <p> second method foreach</p>
+        <ul>
+        <li ng-repeat="book in books.listBooks">book</li>
+        </ul>
+
+        <hr>
+        <p> LivresController witch calls a provider service</p>
+
+        <div ng-controller="LivresController as livres">
+        <h1>hello {{livres.appDesception}} <b ng-show="false">world</b></h1>
+        </div>
+
+        </div>
+    </div>
+
+    <!--<div class="serverPost">-->
+        <!--<div ng-app="myApp" ng-Controller="testQuizController as tests">-->
+            <!--<form>-->
+                <!--<p> {{tests.appName}}</p>-->
+
+                <!--<p><input type="text" ng-model="nameTest"/></p>-->
+                <!--<input type="button" value="submit" ng-click="insertTestQuiz()"/>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+</main>
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/books/BooksController.js"></script>
+<script src="app/books/loggerService.js"></script>
+
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("testQuizController", TestQuizController);
+    function TestQuizController($scope, $http) {
+        var vm = this;
+        vm.appName = "lol";
+
+        $scope.insertTestQuiz = function () {
+//
+            alert('this is $scope.nameTest ' + $scope.nameTest);
+            $http.post("http://localhost:8080/tests", {'titleTest': $scope.nameTest})
+                    .then(function (response) {
+                        var status = response.status;
+
+                        console.dir(status);
+                        console.log("status is: "+status);
+
+                        console.log("start dir");
+
+                        var location = response.headers('Location');
+                        console.dir(location);
+                        var headers = response.headers;
+                        console.dir(headers);
+
+                        console.log("end dir");
+
+                        console.log("content-type is: "+headers('content-type'));
+                        console.log("Content-type is: "+headers('Content-Type'));
+
+                        console.log("Accept is: "+ headers('Accept'));
+                        console.log("accept is: "+ headers('accept'));
+
+                        console.log("Location is: "+headers('Location'));
+                        console.log("location is: "+headers('location'));
+
+                        console.log("Origin is: "+headers('Origin'));
+                        console.log("location is: "+headers('location'));
+
+
+                        alert("done");
+
+                        return null;
+                        //return $http.get(location);
+                    })
+                    .then(function (response) {
+//                        console.dir(response);
+//                        var status = response.status;
+//                        console.dir(status);
+//
+//                        var location = response.headers('Location');
+//                        console.dir(location);
+//                        var headers = response.headers;
+//                        console.dir(headers);
+                        alert("then");
+                    });
+
+
+//               $http.post("http://localhost:8080/tests",
+//                       {'titleTest': $scope.nameTest})
+//                       .success(function(data, status, headers, config) {
+//                           alert( headers('Location') );
+//                           alert( headers('Date') );
+//                            alert( status );
+//                            alert( "done ");
+//
+//                       });
+//                       .success(function (data, status, headers, config) {
+//                           var location = headers('Location');
+//                           alert($scope.nameTest);
+//                           alert(headers('Location'));
+//
+//                           //alert(status);
+//                           //alert(headers);
+//                           //alert(headers.location);
+//                           console.log(headers.Location);
+//                           console.log(headers.Location);
+//                       });
+        }
+    }
+
+
+</script>
+</body>
+</html>

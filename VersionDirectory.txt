@@ -1,0 +1,1 @@
+{"version":1,"date":{"month":"JANUARY","year":2016,"dayOfMonth":14,"dayOfWeek":"THURSDAY","dayOfYear":14,"monthValue":1,"hour":19,"minute":29,"nano":750000000,"second":21,"chronology":{"id":"ISO","calendarType":"iso8601"}},"s3":{"s3_Name":"Dropbox","appName":"ViewQuiz"}}

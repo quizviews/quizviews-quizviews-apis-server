@@ -1,0 +1,4 @@
+language: java
+before_install:
+- openssl aes-256-cbc -K $encrypted_b3880e1d291d_key -iv $encrypted_b3880e1d291d_iv
+  -in application.properties.enc -out application.properties -d

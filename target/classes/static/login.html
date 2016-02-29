@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html ng-app="QuizViewApp">
+<head lang="en">
+<meta charset="UTF-8">
+<title>Login</title>
+<!-- <base href='/'> -->
+<!--     <base href='http://localhost:8080/api/'> -->
+<!--     <base href="http://localhost:63342/FrontEnd/" /> -->
+<!--     <base href="http://localhost:8080/FrontEnd/" /> -->
+<!--     <base href="http://localhost:8080/spa/" /> -->
+
+<link rel="stylesheet" type="text/css"
+	href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="bower_components/bootstrap/dist/css/paper-theme-bootstrap.min.css">
+<!-- https://bootswatch.com/paper/#top -->
+<!--     <link rel="stylesheet" type="text/css" href="css/custom-css.css"> -->
+
+<link rel="apple-touch-icon" sizes="57x57"
+	href="/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"
+	href="/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"
+	href="/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="/img/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Connexion</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="col-sm-6">
+					<form class="form-horizontal" action="/login" method="POST">
+						<h2>Log In</h2>
+						<div class="row form-group">
+							<label for="username" class="form-control col-sm-2">Username:
+							</label>
+							<div class="col-sm-8">
+								<input type="text" name="username" class="form-control" required />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label for="password" class="form-control col-sm-2">Password:
+							</label>
+							<div class="col-sm-8">
+								<input type="password" name="password" class="form-control"
+									required />
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button class="btn btn-primary" required>Log In</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+
+				<div class="col-sm-6">
+					<form class="form-horizontal" action="/login" method="POST">
+						<h2>Log In</h2>
+						<div class="row form-group">
+							<label for="username" class="form-control col-sm-2">Username:
+							</label>
+							<div class="col-sm-8">
+								<input type="text" name="username" class="form-control" required />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label for="password" class="form-control col-sm-2">Password:
+							</label>
+							<div class="col-sm-8">
+								<input type="password" name="password" class="form-control"
+									required />
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button class="btn btn-primary" required>Log In</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#signin" data-toggle="tab"
+						aria-expanded="false">Sign In</a></li>
+					<li class=""><a href="#signup" data-toggle="tab"
+						aria-expanded="true">Sign Up</a></li>
+				</ul>
+
+				<div id="myTabContent" class="tab-content">
+					<div class="tab-pane fade active in" id="signin">
+						<div class="col-sm-6">
+							<form class="form-horizontal" action="/login" method="POST">
+								<div class="row form-group">
+									<label for="username" class="form-control col-sm-2">Username:
+									</label>
+									<div class="col-sm-8">
+										<input type="text" name="username" id="username"
+											class="form-control" required />
+									</div>
+								</div>
+								<div class="row form-group">
+									<label for="password" class="form-control col-sm-2">Password:
+									</label>
+									<div class="col-sm-8">
+										<input type="password" name="password" id="password"
+											class="form-control" required />
+									</div>
+								</div>
+								<div class="row form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button class="btn btn-primary" required>Log In</button>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="signup">
+						<p>new ?.sign up !</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script type='text/javascript' data-cfasync='false'>
+		window.purechatApi = {
+			l : [],
+			t : [],
+			on : function() {
+				this.l.push(arguments);
+			}
+		};
+		(function() {
+			var done = false;
+			var script = document.createElement('script');
+			script.async = true;
+			script.type = 'text/javascript';
+			script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
+			document.getElementsByTagName('HEAD').item(0).appendChild(script);
+			script.onreadystatechange = script.onload = function(e) {
+				if (!done
+						&& (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+					var w = new PCWidget({
+						c : 'bfe9f871-0d23-4cff-89ca-8e49027b88c6',
+						f : true
+					});
+					done = true;
+				}
+			};
+		})();
+	</script>
+</body>
+</html>

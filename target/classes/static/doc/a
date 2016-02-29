@@ -1,0 +1,9 @@
+we have to add attribute name="myForm"
+to a form for validation
+
+the directive must validate it self 
+ ng-form="{{field}}" in the template.
+ inputs must be like ng-model="record[field]"
+ 
+  the field is an attribute in the  directive customized tag <form-field field="xxxx"><form-field/>
+ 

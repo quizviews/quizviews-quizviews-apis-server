@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="QuizViewApp">
+<head lang="en">
+<meta charset="UTF-8">
+<title>Your Tests</title>
+<base href='/'>
+<!--     <base href='http://localhost:8080/api/'> -->
+<!--     <base href="http://localhost:63342/FrontEnd/" /> -->
+<!--     <base href="http://localhost:8080/FrontEnd/" /> -->
+<!--     <base href="http://localhost:8080/spa/" /> -->
+
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/paper-theme-bootstrap.min.css">
+<!-- https://bootswatch.com/paper/#top -->
+<!--     <link rel="stylesheet" type="text/css" href="css/custom-css.css"> -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+	<div class="container">
+	<header id="header" ng-include="'QuizViewApp/app/partial/header.html'"></header>
+		<div class="page-header">
+			<h2>Dashboard</h2>
+		</div>
+		<div class="row">
+			<div class="col-sm-12" ng-include="'QuizViewApp/app/partial/nav.html'"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12" ng-view></div>
+		</div>
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-messages/angular-messages.js"></script>
+	<script src="QuizViewApp/app/app.js"></script>
+	<script src="QuizViewApp/app/controllers/TestController.js"></script>
+	<script src="QuizViewApp/app/factories/TestFactory.js"></script>
+	<script src="QuizViewApp/app/values/TableFieldsValues.js"></script>
+	<script src="QuizViewApp/app/constants/Constants.js"></script>
+	<script src="QuizViewApp/app/filters/Filters.js"></script>
+	<script src="QuizViewApp/app/services/FileUploadService.js"></script>
+	<script src="QuizViewApp/app/directives/directives.js"></script>
+	<script src="js/custom-js.js"></script>
+
+</body>
+</html>

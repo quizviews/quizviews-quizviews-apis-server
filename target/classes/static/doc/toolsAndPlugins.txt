@@ -1,0 +1,9 @@
+ANSI Consolor for colored output
+https://github.com/mihnita/ansi-econsole
+
+23:52:02.949 [main] ERROR c.v.b.app.ViewQuizBackEndApplication --> Message logged at ERROR level
+23:52:02.953 [main] ERROR c.v.b.app.ViewQuizBackEndApplication --> [31mMessage logged at ERROR level[0m
+23:52:02.953 [main] WARN  c.v.b.app.ViewQuizBackEndApplication --> Message logged at WARN level
+23:52:02.954 [main] ERROR c.v.b.app.ViewQuizBackEndApplication --> [35mMessage logged at WARN level[0m
+23:52:02.954 [main] INFO  c.v.b.app.ViewQuizBackEndApplication --> Message logged at INFO level
+23:52:02.954 [main] ERROR c.v.b.app.ViewQuizBackEndApplication --> [34mMessage logged at INFO level[0m

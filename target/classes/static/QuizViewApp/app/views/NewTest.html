@@ -1,0 +1,25 @@
+<h3>New Test:</h3>
+<form name="newTestForm" novalidate class="form-horizontal">
+	<form-field record="test" field="titleTest" live="false" required="true"> </form-field>
+	<!-- 	<form-field record="test" field="email" live="false" required="true"> </form-field> -->
+	<!-- 	<form-field record="test" field="email" live="false" required="false"> </form-field> -->
+	<!-- <form-field record="test" field="lastName" live="false" required="true"> </form-field> -->
+	<!-- <form-field record="test" field="email" live="false" required="true"> </form-field> -->
+	<!-- <form-field record="test" field="x" live="false" required="true"> </form-field> -->
+	<!-- 	<form-field ng-repeat="(k,v) in test" record="test" field="{{k}}" ng-hide=" k === 'titleTest' " > </form-field> -->
+	<form-field ng-repeat="(k,v) in test" record="test" field="{{k}}" ng-if="k !=='titleTest' && k !=='email'" live="false"> </form-field>
+	<div class="row form-group">
+		<!-- 		<label class="col-sm-2 control-label">Test Image Cover</label> <input type="file" class="col-sm-6 custom-file-input" custom-on-change="uploadFile" file-model="myFile" /><span id="file-name-id" class="col-sm-4 control-label"></span> -->
+		<label class="col-sm-2 control-label">Test Image Cover</label> <input type="file" class="col-sm-3 custom-file-input" file-model="myFile" accept="image/*" />
+		<div class="col-sm-7"   >
+<!-- 		<img id="file-name-id" src="http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" width="200" style="display:none;" /> -->
+		<img id="file-name-id" src="http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" width="200"  />
+		</div>
+	</div>
+	<div class="row form-group">
+		<div class="col-sm-offset-2">
+			<button class="btn btn-primary" ng-click="saveTest()">Create Test</button>
+		</div>
+	</div>
+</form>
+<!-- {{testTypes.titleTest}} -->

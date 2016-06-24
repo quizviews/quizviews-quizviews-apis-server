@@ -4,7 +4,6 @@ before_install:
   -in src/main/resources/application.properties.enc -out src/main/resources/application.properties -d
 jdk:
   - oraclejdk8
-
 addons:
   apt:
     packages:
